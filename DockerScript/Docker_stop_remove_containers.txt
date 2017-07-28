@@ -1,0 +1,5 @@
+for i in $(docker ps | awk {'print $1'}|tail -n +2);
+ do
+ docker container stop $i;
+ docker container rm $i;
+ done
